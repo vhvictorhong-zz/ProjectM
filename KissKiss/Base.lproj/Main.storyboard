@@ -104,7 +104,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="oq9-6q-LYH">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="Rfw-sT-vPf"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="zLs-Ji-1JT"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="zLs-Ji-1JT">
+                            <connections>
+                                <segue destination="3q2-xR-ZAz" kind="show" id="Q5G-BI-uRg"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="q13-qq-Hza" id="IhJ-LY-cef"/>
@@ -113,6 +117,64 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FkL-O7-gxe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="704.79999999999995" y="-582.45877061469275"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="TDy-Xi-UbX">
+            <objects>
+                <viewController id="3q2-xR-ZAz" customClass="SearchViewController" customModule="KissKiss" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="enb-h7-yh6"/>
+                        <viewControllerLayoutGuide type="bottom" id="1me-7q-19N"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Cse-Uc-DpC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Raf-c5-v6C">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="3q2-xR-ZAz" id="avY-ve-LYU"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="V7W-z1-Sxj">
+                                <rect key="frame" x="0.0" y="108" width="375" height="510"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="3q2-xR-ZAz" id="OBQ-pE-Qkf"/>
+                                    <outlet property="delegate" destination="3q2-xR-ZAz" id="bHH-sW-Qql"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Raf-c5-v6C" secondAttribute="trailing" id="ErH-3s-QiN"/>
+                            <constraint firstItem="1me-7q-19N" firstAttribute="top" secondItem="V7W-z1-Sxj" secondAttribute="bottom" id="TFD-5A-4Hc"/>
+                            <constraint firstAttribute="trailing" secondItem="V7W-z1-Sxj" secondAttribute="trailing" id="Vho-If-8VJ"/>
+                            <constraint firstItem="Raf-c5-v6C" firstAttribute="leading" secondItem="Cse-Uc-DpC" secondAttribute="leading" id="l9s-XW-aeL"/>
+                            <constraint firstItem="Raf-c5-v6C" firstAttribute="top" secondItem="enb-h7-yh6" secondAttribute="bottom" id="mhY-zD-0Ap"/>
+                            <constraint firstItem="V7W-z1-Sxj" firstAttribute="leading" secondItem="Cse-Uc-DpC" secondAttribute="leading" id="xiN-3k-D7m"/>
+                            <constraint firstItem="V7W-z1-Sxj" firstAttribute="top" secondItem="Raf-c5-v6C" secondAttribute="bottom" id="yLs-nF-4BX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="O1e-y7-CUs" id="bUf-ff-eW4"/>
+                        <outlet property="searhBar" destination="Raf-c5-v6C" id="6Zv-Ge-PhC"/>
+                        <outlet property="tableView" destination="V7W-z1-Sxj" id="Ml3-1H-Tpp"/>
+                        <outlet property="tableViewBottomConstraint" destination="TFD-5A-4Hc" id="Qpg-xF-Orn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y7B-Ks-b4s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="O1e-y7-CUs">
+                    <connections>
+                        <outlet property="delegate" destination="3q2-xR-ZAz" id="HwY-La-fKT"/>
+                        <outlet property="searchContentsController" destination="3q2-xR-ZAz" id="GHS-2U-cv5"/>
+                        <outlet property="searchResultsDataSource" destination="3q2-xR-ZAz" id="tL3-s4-BoA"/>
+                        <outlet property="searchResultsDelegate" destination="3q2-xR-ZAz" id="Kpk-3D-csL"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="1362" y="-1219"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="4Iw-1H-mpS">
@@ -140,7 +202,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fwn-aa-46Z" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Bag" id="1Rd-79-xYO"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="63z-88-6hW">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="63z-88-6hW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

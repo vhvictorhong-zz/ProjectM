@@ -44,7 +44,7 @@ class BarcodeViewController: BarcodeScannerController {
 
 }
 
-extension BarcodeViewController: BarcodeScannerCodeDelegate {
+extension BarcodeViewController: BarcodeScannerCodeDelegate, BarcodeScannerErrorDelegate, BarcodeScannerDismissalDelegate {
     
     func barcodeScanner(_ controller: BarcodeScannerController, didCaptureCode code: String, type: String) {
         
@@ -65,18 +65,14 @@ extension BarcodeViewController: BarcodeScannerCodeDelegate {
         //}
         
     }
-}
-
-extension BarcodeViewController: BarcodeScannerErrorDelegate {
     
     func barcodeScanner(_ controller: BarcodeScannerController, didReceiveError error: Error) {
         print(error)
     }
-}
-
-extension BarcodeViewController: BarcodeScannerDismissalDelegate {
     
     func barcodeScannerDidDismiss(_ controller: BarcodeScannerController) {
         controller.dismiss(animated: true, completion: nil)
     }
+    
 }
+

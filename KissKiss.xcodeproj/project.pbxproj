@@ -17,6 +17,9 @@
 		2B7A37771ED4A74500FBA499 /* BagCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B7A37751ED4A74500FBA499 /* BagCollectionViewCell.xib */; };
 		2B7A37791ED4CB6900FBA499 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7A37781ED4CB6900FBA499 /* SearchViewController.swift */; };
 		2B8A0B611ED60DEF00778493 /* BarcodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8A0B601ED60DEF00778493 /* BarcodeViewController.swift */; };
+		2B8A0B631ED62A4A00778493 /* DetailBagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8A0B621ED62A4A00778493 /* DetailBagViewController.swift */; };
+		2B8A0B661ED62EDC00778493 /* SearhTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8A0B641ED62EDC00778493 /* SearhTableViewCell.swift */; };
+		2B8A0B671ED62EDC00778493 /* SearhTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B8A0B651ED62EDC00778493 /* SearhTableViewCell.xib */; };
 		4010F7315C796DDE2C566F1D /* Pods_KissKiss.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F8821F076AF9AD84470174 /* Pods_KissKiss.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +36,9 @@
 		2B7A37751ED4A74500FBA499 /* BagCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BagCollectionViewCell.xib; sourceTree = "<group>"; };
 		2B7A37781ED4CB6900FBA499 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		2B8A0B601ED60DEF00778493 /* BarcodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeViewController.swift; sourceTree = "<group>"; };
+		2B8A0B621ED62A4A00778493 /* DetailBagViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailBagViewController.swift; sourceTree = "<group>"; };
+		2B8A0B641ED62EDC00778493 /* SearhTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearhTableViewCell.swift; sourceTree = "<group>"; };
+		2B8A0B651ED62EDC00778493 /* SearhTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearhTableViewCell.xib; sourceTree = "<group>"; };
 		4C558334D526207A30CAAA09 /* Pods-KissKiss.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KissKiss.release.xcconfig"; path = "Pods/Target Support Files/Pods-KissKiss/Pods-KissKiss.release.xcconfig"; sourceTree = "<group>"; };
 		7390B5C8B4D0998D5348954B /* Pods-KissKiss.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KissKiss.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KissKiss/Pods-KissKiss.debug.xcconfig"; sourceTree = "<group>"; };
 		F6F8821F076AF9AD84470174 /* Pods_KissKiss.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KissKiss.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				2B7A37721ED3680F00FBA499 /* BagViewController.swift */,
+				2B8A0B621ED62A4A00778493 /* DetailBagViewController.swift */,
 				2B7A37781ED4CB6900FBA499 /* SearchViewController.swift */,
 				2B8A0B601ED60DEF00778493 /* BarcodeViewController.swift */,
 				2B7A37601ED3603E00FBA499 /* Main.storyboard */,
@@ -96,6 +103,8 @@
 			children = (
 				2B7A37741ED4A74500FBA499 /* BagCollectionViewCell.swift */,
 				2B7A37751ED4A74500FBA499 /* BagCollectionViewCell.xib */,
+				2B8A0B641ED62EDC00778493 /* SearhTableViewCell.swift */,
+				2B8A0B651ED62EDC00778493 /* SearhTableViewCell.xib */,
 			);
 			name = Cell/Nib;
 			sourceTree = "<group>";
@@ -193,6 +202,7 @@
 				2B7A376A1ED3603E00FBA499 /* LaunchScreen.storyboard in Resources */,
 				2B7A37671ED3603E00FBA499 /* Assets.xcassets in Resources */,
 				2B7A37621ED3603E00FBA499 /* Main.storyboard in Resources */,
+				2B8A0B671ED62EDC00778493 /* SearhTableViewCell.xib in Resources */,
 				2B7A37771ED4A74500FBA499 /* BagCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,6 +263,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B7A37791ED4CB6900FBA499 /* SearchViewController.swift in Sources */,
+				2B8A0B661ED62EDC00778493 /* SearhTableViewCell.swift in Sources */,
+				2B8A0B631ED62A4A00778493 /* DetailBagViewController.swift in Sources */,
 				2B7A37651ED3603E00FBA499 /* KissKiss.xcdatamodeld in Sources */,
 				2B7A375D1ED3603E00FBA499 /* AppDelegate.swift in Sources */,
 				2B7A37731ED3680F00FBA499 /* BagViewController.swift in Sources */,
