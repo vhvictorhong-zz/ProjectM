@@ -7,11 +7,20 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuthUI
+import FirebaseGoogleAuthUI
 
 class BagViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     var imageArray = [#imageLiteral(resourceName: "eyesCA"), #imageLiteral(resourceName: "lipsCA"), #imageLiteral(resourceName: "faceCA")]
+    
+    var ref: FIRDatabaseReference!
+    fileprivate var _refHandle: FIRDatabaseHandle!
+    fileprivate var _authHandle: FIRAuthStateDidChangeListenerHandle!
+    var user: FIRUser?
+    var displayName = "Anonymous"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +40,84 @@ class BagViewController: UIViewController {
         layout.itemSize.height = self.view.bounds.size.height / 3.2
         
     }
+    
+    // MARK: Config
+    
+    func configureAuth() {
+        
+        let provider: [FUIAuthProvider] = [FUIGoogleAuth()]
+        FUIAuth.defaultAuthUI()?.providers = provider
+        
+        _authHandle = FIRAuth.auth()?.addStateDidChangeListener({ (auth: FIRAuth, user: FIRUser?) in
+            
+            
+            //check if there is a current user
+            if let activeUser = user {
+                //check if the current app user is the current FIRUser
+                if self.user != activeUser {
+                    self.user = activeUser
+                    self.signedInStatus(isSignedIn: true)
+                    let name = user!.email!.components(separatedBy: "@")[0]
+                    self.displayName = name
+                }
+            } else {
+                //user must sign in
+                self.signedInStatus(isSignedIn: false)
+                self.loginSession()
+            }
+        })
+        
+    }
+    
+    func configureDatabase() {
+        
+        ref = FIRDatabase.database().reference()
+        _refHandle = ref.child("user").child((user?.uid)!).observe(.childAdded) { (snapshot: FIRDataSnapshot) in
+            
+            let listSnapshot: FIRDataSnapshot! = snapshot
+            let list = listSnapshot.value as! [String]
+//            self.userList = list
+//            
+//            for list in self.userList {
+//                StockManager.fetchStockForSymbol(symbol: list, completion: { (stock) in
+//                    self.watchList[list] = stock
+//                    self.tableView.reloadData()
+//                })
+//            }
+            
+        }
+        
+    }
+    
+    // MARK: Sign In and Out
+    
+    func signedInStatus(isSignedIn: Bool) {
+        //signInButton.isEnabled = !isSignedIn
+        //signOutButton.isEnabled = isSignedIn
+        //        messagesTable.isHidden = !isSignedIn
+        //        messageTextField.isHidden = !isSignedIn
+        //        sendButton.isHidden = !isSignedIn
+        //        imageMessage.isHidden = !isSignedIn
+        
+        if (isSignedIn) {
+            //tableView.isHidden = true
+            // remove background blur (will use when showing image messages)
+//            tableView.rowHeight = UITableViewAutomaticDimension
+//            tableView.estimatedRowHeight = 70
+            
+            //configureDatabase()
+            //            configureStorage()
+            //            configureRemoteConfig()
+            //            fetchConfig()
+            
+        }
+    }
 
+    func loginSession() {
+        let authViewController = FUIAuth.defaultAuthUI()!.authViewController()
+        self.present(authViewController, animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -65,5 +151,10 @@ extension BagViewController: UICollectionViewDelegate, UICollectionViewDataSourc
         cell?.bagImageView.image = imageArray[indexPath.row]
         
         return cell!
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        
     }
 }

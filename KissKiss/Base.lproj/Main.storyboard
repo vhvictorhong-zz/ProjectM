@@ -112,11 +112,49 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="q13-qq-Hza" id="IhJ-LY-cef"/>
+                        <segue destination="YYv-6C-g0x" kind="show" identifier="showDetailBagVC" id="Id5-zW-FmD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FkL-O7-gxe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="704.79999999999995" y="-582.45877061469275"/>
+        </scene>
+        <!--Detail Bag View Controller-->
+        <scene sceneID="5Dn-TN-epr">
+            <objects>
+                <viewController id="YYv-6C-g0x" customClass="DetailBagViewController" customModule="KissKiss" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TPR-HI-juh"/>
+                        <viewControllerLayoutGuide type="bottom" id="MAE-cy-lLW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5F8-if-yR9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cd6-p7-Rj1">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="YYv-6C-g0x" id="3zm-iK-sJR"/>
+                                    <outlet property="delegate" destination="YYv-6C-g0x" id="KcI-f3-IKE"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MAE-cy-lLW" firstAttribute="top" secondItem="cd6-p7-Rj1" secondAttribute="bottom" id="Ycw-tl-pB0"/>
+                            <constraint firstAttribute="trailing" secondItem="cd6-p7-Rj1" secondAttribute="trailing" id="ddo-su-thO"/>
+                            <constraint firstItem="cd6-p7-Rj1" firstAttribute="leading" secondItem="5F8-if-yR9" secondAttribute="leading" id="odh-yq-nP2"/>
+                            <constraint firstItem="cd6-p7-Rj1" firstAttribute="top" secondItem="TPR-HI-juh" secondAttribute="bottom" id="sVf-KH-HSK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="cd6-p7-Rj1" id="cdC-yc-H8a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3fv-Br-6rB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1406" y="-583"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="TDy-Xi-UbX">
@@ -174,7 +212,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1362" y="-1219"/>
+            <point key="canvasLocation" x="1406" y="-1231"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="4Iw-1H-mpS">

@@ -20,6 +20,7 @@
 		2B8A0B631ED62A4A00778493 /* DetailBagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8A0B621ED62A4A00778493 /* DetailBagViewController.swift */; };
 		2B8A0B661ED62EDC00778493 /* SearhTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8A0B641ED62EDC00778493 /* SearhTableViewCell.swift */; };
 		2B8A0B671ED62EDC00778493 /* SearhTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B8A0B651ED62EDC00778493 /* SearhTableViewCell.xib */; };
+		2BC9F0B81ED764F700BD7EA9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2BC9F0B71ED764F700BD7EA9 /* GoogleService-Info.plist */; };
 		4010F7315C796DDE2C566F1D /* Pods_KissKiss.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F8821F076AF9AD84470174 /* Pods_KissKiss.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		2B8A0B621ED62A4A00778493 /* DetailBagViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailBagViewController.swift; sourceTree = "<group>"; };
 		2B8A0B641ED62EDC00778493 /* SearhTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearhTableViewCell.swift; sourceTree = "<group>"; };
 		2B8A0B651ED62EDC00778493 /* SearhTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearhTableViewCell.xib; sourceTree = "<group>"; };
+		2BC9F0B71ED764F700BD7EA9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4C558334D526207A30CAAA09 /* Pods-KissKiss.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KissKiss.release.xcconfig"; path = "Pods/Target Support Files/Pods-KissKiss/Pods-KissKiss.release.xcconfig"; sourceTree = "<group>"; };
 		7390B5C8B4D0998D5348954B /* Pods-KissKiss.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KissKiss.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KissKiss/Pods-KissKiss.debug.xcconfig"; sourceTree = "<group>"; };
 		F6F8821F076AF9AD84470174 /* Pods_KissKiss.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KissKiss.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +116,7 @@
 			children = (
 				2B7A37661ED3603E00FBA499 /* Assets.xcassets */,
 				2B7A376B1ED3603E00FBA499 /* Info.plist */,
+				2BC9F0B71ED764F700BD7EA9 /* GoogleService-Info.plist */,
 				2B7A37631ED3603E00FBA499 /* KissKiss.xcdatamodeld */,
 			);
 			name = "Supporting Files";
@@ -204,6 +207,7 @@
 				2B7A37621ED3603E00FBA499 /* Main.storyboard in Resources */,
 				2B8A0B671ED62EDC00778493 /* SearhTableViewCell.xib in Resources */,
 				2B7A37771ED4A74500FBA499 /* BagCollectionViewCell.xib in Resources */,
+				2BC9F0B81ED764F700BD7EA9 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
