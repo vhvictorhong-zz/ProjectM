@@ -8,7 +8,9 @@
 
 import UIKit
 
-class GestureViewController: UIViewController {
+class GestureViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    @IBOutlet weak var imageView: UIImageView!
     
     let swipeRightRec = UISwipeGestureRecognizer()
     let swipeLeftRec = UISwipeGestureRecognizer()
@@ -29,12 +31,29 @@ class GestureViewController: UIViewController {
     }
     
     func swipeRightDetected(_ sender: UISwipeGestureRecognizer) {
+        
+        if UIImagePickerController.isSourceTypeAvailable(
+            UIImagePickerControllerSourceType.camera) {
+            
+            let imagePicker = UIImagePickerController()
+            
+            imagePicker.delegate = self as UIImagePickerControllerDelegate & UINavigationControllerDelegate
+            imagePicker.sourceType =
+                UIImagePickerControllerSourceType.camera
+//            imagePicker.mediaTypes = [kUTTypeImage as String]
+            imagePicker.allowsEditing = false
+            
+            self.present(imagePicker, animated: true,
+                         completion: nil)
+        }
+        
         print("Right swipe")
     }
     
     func swipeLeftDetected(_ sender: UISwipeGestureRecognizer) {
         print("Left swipe")
     }
+    
     
     /*
     // MARK: - Navigation
