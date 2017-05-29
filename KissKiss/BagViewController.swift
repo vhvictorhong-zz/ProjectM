@@ -26,6 +26,9 @@ class BagViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        configureAuth()
+        
         collectionView.register(UINib(nibName: "BagCollectionViewCell", bundle: Bundle.main), forCellWithReuseIdentifier: "bagCell")
         
     }
@@ -49,7 +52,6 @@ class BagViewController: UIViewController {
         FUIAuth.defaultAuthUI()?.providers = provider
         
         _authHandle = FIRAuth.auth()?.addStateDidChangeListener({ (auth: FIRAuth, user: FIRUser?) in
-            
             
             //check if there is a current user
             if let activeUser = user {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B1AED3D1EDCB4E000107134 /* GestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1AED3C1EDCB4E000107134 /* GestureViewController.swift */; };
 		2B7A375D1ED3603E00FBA499 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7A375C1ED3603E00FBA499 /* AppDelegate.swift */; };
 		2B7A37621ED3603E00FBA499 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B7A37601ED3603E00FBA499 /* Main.storyboard */; };
 		2B7A37651ED3603E00FBA499 /* KissKiss.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2B7A37631ED3603E00FBA499 /* KissKiss.xcdatamodeld */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B1AED3C1EDCB4E000107134 /* GestureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureViewController.swift; sourceTree = "<group>"; };
 		2B7A37591ED3603E00FBA499 /* KissKiss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KissKiss.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B7A375C1ED3603E00FBA499 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B7A37611ED3603E00FBA499 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -58,6 +60,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B1AED401EDCB80500107134 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		2B7A37501ED3603E00FBA499 = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +91,7 @@
 				2B7A375C1ED3603E00FBA499 /* AppDelegate.swift */,
 				2B7A377A1ED4CB8700FBA499 /* View */,
 				2B7A377B1ED4CBA200FBA499 /* Cell/Nib */,
+				2B1AED401EDCB80500107134 /* Model */,
 				2B7A377C1ED4CBB900FBA499 /* Supporting Files */,
 			);
 			path = KissKiss;
@@ -94,6 +104,7 @@
 				2B8A0B621ED62A4A00778493 /* DetailBagViewController.swift */,
 				2B7A37781ED4CB6900FBA499 /* SearchViewController.swift */,
 				2B8A0B601ED60DEF00778493 /* BarcodeViewController.swift */,
+				2B1AED3C1EDCB4E000107134 /* GestureViewController.swift */,
 				2B7A37601ED3603E00FBA499 /* Main.storyboard */,
 				2B7A37681ED3603E00FBA499 /* LaunchScreen.storyboard */,
 			);
@@ -272,6 +283,7 @@
 				2B7A37651ED3603E00FBA499 /* KissKiss.xcdatamodeld in Sources */,
 				2B7A375D1ED3603E00FBA499 /* AppDelegate.swift in Sources */,
 				2B7A37731ED3680F00FBA499 /* BagViewController.swift in Sources */,
+				2B1AED3D1EDCB4E000107134 /* GestureViewController.swift in Sources */,
 				2B7A37761ED4A74500FBA499 /* BagCollectionViewCell.swift in Sources */,
 				2B8A0B611ED60DEF00778493 /* BarcodeViewController.swift in Sources */,
 			);
