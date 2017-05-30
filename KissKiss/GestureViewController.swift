@@ -24,7 +24,8 @@ class GestureViewController: UIViewController, UIImagePickerControllerDelegate, 
         swipeRightRec.direction = .right
         self.view!.addGestureRecognizer(swipeRightRec)
         
-        swipeLeftRec.addTarget(self, action: #selector(swipeLeftDetected(_:)) )
+//        swipeLeftRec.addTarget(self, action: #selector(swipeLeftDetected(_:)) )
+        swipeLeftRec.addTarget(self, action: #selector(Gesture.swipeLeftDetected(_:)) )
         swipeLeftRec.direction = .left
         self.view!.addGestureRecognizer(swipeLeftRec)
         
@@ -51,6 +52,8 @@ class GestureViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     func swipeLeftDetected(_ sender: UISwipeGestureRecognizer) {
+        
+        
         print("Left swipe")
     }
     
