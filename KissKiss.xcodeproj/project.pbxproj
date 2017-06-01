@@ -12,6 +12,9 @@
 		2B1AED451EDCC4DF00107134 /* MakeupLookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1AED431EDCC4DF00107134 /* MakeupLookTableViewCell.swift */; };
 		2B1AED461EDCC4DF00107134 /* MakeupLookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B1AED441EDCC4DF00107134 /* MakeupLookTableViewCell.xib */; };
 		2B1AED481EDDFB3500107134 /* Gesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1AED471EDDFB3500107134 /* Gesture.swift */; };
+		2B1AED4E1EE0AE5E00107134 /* CreateItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1AED4D1EE0AE5E00107134 /* CreateItemViewController.swift */; };
+		2B1AED531EE0B13100107134 /* ProductIconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1AED511EE0B13100107134 /* ProductIconViewController.swift */; };
+		2B1AED541EE0B13100107134 /* ProductIconViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B1AED521EE0B13100107134 /* ProductIconViewController.xib */; };
 		2B7A375D1ED3603E00FBA499 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7A375C1ED3603E00FBA499 /* AppDelegate.swift */; };
 		2B7A37621ED3603E00FBA499 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B7A37601ED3603E00FBA499 /* Main.storyboard */; };
 		2B7A37651ED3603E00FBA499 /* KissKiss.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2B7A37631ED3603E00FBA499 /* KissKiss.xcdatamodeld */; };
@@ -35,6 +38,9 @@
 		2B1AED431EDCC4DF00107134 /* MakeupLookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeupLookTableViewCell.swift; sourceTree = "<group>"; };
 		2B1AED441EDCC4DF00107134 /* MakeupLookTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MakeupLookTableViewCell.xib; sourceTree = "<group>"; };
 		2B1AED471EDDFB3500107134 /* Gesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gesture.swift; sourceTree = "<group>"; };
+		2B1AED4D1EE0AE5E00107134 /* CreateItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateItemViewController.swift; sourceTree = "<group>"; };
+		2B1AED511EE0B13100107134 /* ProductIconViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductIconViewController.swift; sourceTree = "<group>"; };
+		2B1AED521EE0B13100107134 /* ProductIconViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductIconViewController.xib; sourceTree = "<group>"; };
 		2B7A37591ED3603E00FBA499 /* KissKiss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KissKiss.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B7A375C1ED3603E00FBA499 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B7A37611ED3603E00FBA499 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -115,6 +121,7 @@
 				2B8A0B601ED60DEF00778493 /* BarcodeViewController.swift */,
 				2B1AED3C1EDCB4E000107134 /* GestureViewController.swift */,
 				2B1AED411EDCC4C200107134 /* MakeupLookViewController.swift */,
+				2B1AED4D1EE0AE5E00107134 /* CreateItemViewController.swift */,
 				2B7A37601ED3603E00FBA499 /* Main.storyboard */,
 				2B7A37681ED3603E00FBA499 /* LaunchScreen.storyboard */,
 			);
@@ -130,6 +137,8 @@
 				2B8A0B651ED62EDC00778493 /* SearhTableViewCell.xib */,
 				2B1AED431EDCC4DF00107134 /* MakeupLookTableViewCell.swift */,
 				2B1AED441EDCC4DF00107134 /* MakeupLookTableViewCell.xib */,
+				2B1AED511EE0B13100107134 /* ProductIconViewController.swift */,
+				2B1AED521EE0B13100107134 /* ProductIconViewController.xib */,
 			);
 			name = Cell/Nib;
 			sourceTree = "<group>";
@@ -229,6 +238,7 @@
 				2B7A37671ED3603E00FBA499 /* Assets.xcassets in Resources */,
 				2B1AED461EDCC4DF00107134 /* MakeupLookTableViewCell.xib in Resources */,
 				2B7A37621ED3603E00FBA499 /* Main.storyboard in Resources */,
+				2B1AED541EE0B13100107134 /* ProductIconViewController.xib in Resources */,
 				2B8A0B671ED62EDC00778493 /* SearhTableViewCell.xib in Resources */,
 				2B7A37771ED4A74500FBA499 /* BagCollectionViewCell.xib in Resources */,
 				2BC9F0B81ED764F700BD7EA9 /* GoogleService-Info.plist in Resources */,
@@ -290,8 +300,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B1AED4E1EE0AE5E00107134 /* CreateItemViewController.swift in Sources */,
 				2B7A37791ED4CB6900FBA499 /* SearchViewController.swift in Sources */,
 				2B8A0B661ED62EDC00778493 /* SearhTableViewCell.swift in Sources */,
+				2B1AED531EE0B13100107134 /* ProductIconViewController.swift in Sources */,
 				2B1AED421EDCC4C200107134 /* MakeupLookViewController.swift in Sources */,
 				2B1AED481EDDFB3500107134 /* Gesture.swift in Sources */,
 				2B8A0B631ED62A4A00778493 /* DetailBagViewController.swift in Sources */,

@@ -9,11 +9,10 @@
 import UIKit
 
 class GestureViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
-    @IBOutlet weak var imageView: UIImageView!
-    
+
     let swipeRightRec = UISwipeGestureRecognizer()
     let swipeLeftRec = UISwipeGestureRecognizer()
+    let imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +23,7 @@ class GestureViewController: UIViewController, UIImagePickerControllerDelegate, 
         swipeRightRec.direction = .right
         self.view!.addGestureRecognizer(swipeRightRec)
         
-//        swipeLeftRec.addTarget(self, action: #selector(swipeLeftDetected(_:)) )
-        swipeLeftRec.addTarget(self, action: #selector(Gesture.swipeLeftDetected(_:)) )
+        swipeLeftRec.addTarget(self, action: #selector(swipeLeftDetected(_:)) )
         swipeLeftRec.direction = .left
         self.view!.addGestureRecognizer(swipeLeftRec)
         
@@ -33,26 +31,22 @@ class GestureViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     func swipeRightDetected(_ sender: UISwipeGestureRecognizer) {
         
-        if UIImagePickerController.isSourceTypeAvailable(
-            UIImagePickerControllerSourceType.camera) {
-            
-            let imagePicker = UIImagePickerController()
-            
-            imagePicker.delegate = self as UIImagePickerControllerDelegate & UINavigationControllerDelegate
-            imagePicker.sourceType =
-                UIImagePickerControllerSourceType.camera
-//            imagePicker.mediaTypes = [kUTTypeImage as String]
-            imagePicker.allowsEditing = false
-            
-            self.present(imagePicker, animated: true,
-                         completion: nil)
+        if(UIImagePickerController .isSourceTypeAvailable(UIImagePickerControllerSourceType.camera)) {
+            imagePicker.sourceType = UIImagePickerControllerSourceType.camera
+            imagePicker.allowsEditing = true
+            self.present(imagePicker, animated: true, completion: nil)
+        } else {
+            let alert  = UIAlertController(title: "Warning", message: "You don't have camera", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
-        
         print("Right swipe")
     }
     
     func swipeLeftDetected(_ sender: UISwipeGestureRecognizer) {
         
+        let barcodeVC = BarcodeViewController()
+        self.present(barcodeVC, animated: true, completion: nil)
         
         print("Left swipe")
     }
