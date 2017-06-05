@@ -51,8 +51,13 @@ class CreateItemViewController: UIViewController, WWCalendarTimeSelectorProtocol
     
     func WWCalendarTimeSelectorDone(_ selector: WWCalendarTimeSelector, date: Date) {
         
-        print(date)
-        print(selector)
+        print("Current date: \(date)")
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = DateFormatter.Style.full
+        let formatDate = dateFormatter.string(from: date)
+        
+        print("Format date: \(formatDate)")
         
     }
     /*
