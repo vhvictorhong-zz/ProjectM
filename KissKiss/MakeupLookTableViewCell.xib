@@ -11,23 +11,71 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="319" id="KGk-i7-Jjw" customClass="MakeupLookTableViewCell" customModule="KissKiss" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="343" height="319"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="386" id="KGk-i7-Jjw" customClass="MakeupLookTableViewCell" customModule="KissKiss" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="345" height="386"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="343" height="318.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="345" height="385.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WCz-Wb-PFb">
-                        <rect key="frame" x="0.0" y="0.0" width="343" height="318.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="345" height="385.5"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C8q-RT-1Kx">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C8q-RT-1Kx">
                                 <rect key="frame" x="8" y="8" width="33" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="User"/>
+                                <connections>
+                                    <action selector="userDetailAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="q3t-KU-HOp"/>
+                                </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="us8-Zi-eQh">
+                                <rect key="frame" x="0.0" y="257.5" width="345" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="P6E-6S-9ZG"/>
+                                </constraints>
+                            </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twttr-icn-tweet-place-holder-photo.png" translatesAutoresizingMaskIntoConstraints="NO" id="yfe-x2-IE5">
+                                <rect key="frame" x="0.0" y="46" width="345" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="FjX-s4-3tE"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="PYr-rC-hoG">
+                                <rect key="frame" x="8" y="182" width="188" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7N-lw-3HL">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="Like"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M3L-Id-zCr">
+                                        <rect key="frame" x="35" y="0.0" width="32" height="30"/>
+                                        <state key="normal" title="Fave"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azs-6U-BnL">
+                                        <rect key="frame" x="72" y="0.0" width="67" height="30"/>
+                                        <state key="normal" title="Comment"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bpr-iO-Suw">
+                                        <rect key="frame" x="144" y="0.0" width="44" height="30"/>
+                                        <state key="normal" title="Follow"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="yfe-x2-IE5" secondAttribute="trailing" id="3oQ-Sj-d42"/>
+                            <constraint firstItem="yfe-x2-IE5" firstAttribute="leading" secondItem="WCz-Wb-PFb" secondAttribute="leading" id="4rU-Ug-wO6"/>
+                            <constraint firstItem="PYr-rC-hoG" firstAttribute="top" secondItem="yfe-x2-IE5" secondAttribute="bottom" constant="8" id="6Y4-yU-huR"/>
+                            <constraint firstItem="PYr-rC-hoG" firstAttribute="leading" secondItem="WCz-Wb-PFb" secondAttribute="leading" constant="8" id="8Q3-Dy-xnc"/>
+                            <constraint firstItem="us8-Zi-eQh" firstAttribute="leading" secondItem="WCz-Wb-PFb" secondAttribute="leading" id="Atb-Rj-blr"/>
+                            <constraint firstAttribute="trailing" secondItem="us8-Zi-eQh" secondAttribute="trailing" id="ecf-aI-03I"/>
+                            <constraint firstItem="yfe-x2-IE5" firstAttribute="top" secondItem="C8q-RT-1Kx" secondAttribute="bottom" constant="8" id="p1z-DB-EJP"/>
+                            <constraint firstAttribute="bottom" secondItem="us8-Zi-eQh" secondAttribute="bottom" id="p8B-gG-UXd"/>
+                            <constraint firstItem="C8q-RT-1Kx" firstAttribute="leading" secondItem="WCz-Wb-PFb" secondAttribute="leading" constant="8" id="t80-iN-paW"/>
+                            <constraint firstItem="C8q-RT-1Kx" firstAttribute="top" secondItem="WCz-Wb-PFb" secondAttribute="top" constant="8" id="whQ-U7-enZ"/>
+                        </constraints>
                     </view>
                 </subviews>
                 <constraints>
@@ -37,7 +85,13 @@
                     <constraint firstItem="WCz-Wb-PFb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="zcS-of-8E0"/>
                 </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="30.5" y="147.5"/>
+            <connections>
+                <outlet property="tableView" destination="us8-Zi-eQh" id="uJ9-iv-T2l"/>
+            </connections>
+            <point key="canvasLocation" x="31.5" y="181"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="twttr-icn-tweet-place-holder-photo.png" width="70" height="71"/>
+    </resources>
 </document>

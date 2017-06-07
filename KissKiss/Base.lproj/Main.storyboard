@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Tgs-hN-dDj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6aR-fD-WrM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -158,7 +158,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L4N-iX-LbE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-234" y="72"/>
+            <point key="canvasLocation" x="-234" y="727"/>
         </scene>
         <!--Makeup Looks-->
         <scene sceneID="jJi-cZ-YP3">
@@ -196,7 +196,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c4e-rJ-x84" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-234" y="732"/>
+            <point key="canvasLocation" x="-234" y="79"/>
         </scene>
         <!--Bag View Controller-->
         <scene sceneID="y0n-l4-AEC">
@@ -357,7 +357,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="Fwn-aa-46Z" kind="relationship" relationship="viewControllers" id="et5-X3-Iee"/>
-                        <segue destination="vPB-G4-tBP" kind="relationship" relationship="viewControllers" id="oHp-x6-V5a"/>
                         <segue destination="6aR-fD-WrM" kind="relationship" relationship="viewControllers" id="n2L-tr-ww9"/>
                     </connections>
                 </tabBarController>
@@ -389,7 +388,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fwn-aa-46Z" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Bag" id="1Rd-79-xYO"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="63z-88-6hW">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="63z-88-6hW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
