@@ -24,16 +24,19 @@ class MakeupLookViewController: UIViewController {
         
     }
     
-
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "showMULDetailVC" {
+            if let mulDetailVC = segue.destination as? MULDetailViewController {
+                //mulDetailVC.user = "user"
+            }
+        }
     }
-    */
+ 
 
 }
 
@@ -55,7 +58,16 @@ extension MakeupLookViewController: UITableViewDataSource, UITableViewDelegate {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "makeupCell", for: indexPath) as! MakeupLookTableViewCell
         
+        cell.userButton.addTarget(self, action: #selector(presentMULDetailVC), for: .touchUpInside)
+        
         return cell
         
     }
+    
+    func presentMULDetailVC() {
+        
+        performSegue(withIdentifier: "showMULDetailVC", sender: self)
+        
+    }
+    
 }

@@ -24,9 +24,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C8q-RT-1Kx">
                                 <rect key="frame" x="8" y="8" width="33" height="30"/>
                                 <state key="normal" title="User"/>
-                                <connections>
-                                    <action selector="userDetailAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="q3t-KU-HOp"/>
-                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="us8-Zi-eQh">
                                 <rect key="frame" x="0.0" y="257.5" width="345" height="128"/>
@@ -87,6 +84,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="tableView" destination="us8-Zi-eQh" id="uJ9-iv-T2l"/>
+                <outlet property="userButton" destination="C8q-RT-1Kx" id="HKt-48-yHA"/>
             </connections>
             <point key="canvasLocation" x="31.5" y="181"/>
         </tableViewCell>

@@ -11,6 +11,7 @@ import UIKit
 class MakeupLookTableViewCell: UITableViewCell {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var userButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,12 +30,6 @@ class MakeupLookTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
-    @IBAction func userDetailAction(_ sender: Any) {
-        
-        
-    }
-    
     
 }
 
