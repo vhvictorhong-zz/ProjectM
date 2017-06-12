@@ -8,14 +8,11 @@
 
 import UIKit
 
-class MULDetailViewController: UIViewController {
+class MULDetailViewController: UIViewController, UITabBarDelegate {
     
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var collectionButton: UIButton!
-    @IBOutlet weak var tableButton: UIButton!
-    
-    var isCollectionButtonEnabled = true
-    var isTableButtonEnabled = false
+    @IBOutlet weak var tabBar: UITabBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +21,9 @@ class MULDetailViewController: UIViewController {
         //detailLabel.text = user
         
         collectionView.register(UINib(nibName: "ImageCollectionViewCell", bundle: Bundle.main), forCellWithReuseIdentifier: "imageCell")
+        tableView.register(UINib(nibName: "MakeupLookTableViewCell", bundle: nil), forCellReuseIdentifier: "makeupCell")
+        tableView.showsVerticalScrollIndicator = false
+        tableView.rowHeight = 380
         
     }
     
@@ -38,13 +38,20 @@ class MULDetailViewController: UIViewController {
         
     }
     
-    @IBAction func collectionAction(_ sender: Any) {
+    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         
-        
+        if item.tag == 0 {
+            print("recent")
+            collectionView.isHidden = false
+            tableView.isHidden = true
+        } else {
+            print("more")
+            collectionView.isHidden = true
+            tableView.isHidden = false
+        }
+
     }
     
-    @IBAction func tableAction(_ sender: Any) {
-    }
     
     /*
     // MARK: - Navigation
@@ -81,3 +88,36 @@ extension MULDetailViewController: UICollectionViewDelegate, UICollectionViewDat
         return cell!
     }
 }
+
+extension MULDetailViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        
+        return 1
+        
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return 4
+        
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "makeupCell", for: indexPath) as! MakeupLookTableViewCell
+        
+        cell.userButton.addTarget(self, action: #selector(presentMULDetailVC), for: .touchUpInside)
+        
+        return cell
+        
+    }
+    
+    func presentMULDetailVC() {
+        
+        performSegue(withIdentifier: "showMULDetailVC", sender: self)
+        
+    }
+    
+}
+
