@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cOU-YA-mc1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Tgs-hN-dDj">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -127,14 +127,30 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Purchase" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7s3-zm-wm0">
+                                <rect key="frame" x="218" y="299" width="72" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Expiration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mv-WW-p7e">
+                                <rect key="frame" x="218" y="345" width="76" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="expirationDateLabel" destination="9mv-WW-p7e" id="YEA-bx-2wH"/>
                         <outlet property="productColourTextField" destination="gRG-zn-66n" id="BnL-GB-p68"/>
                         <outlet property="productNameTextField" destination="XJd-gD-hrE" id="KQt-CG-bpJ"/>
                         <outlet property="productPriceTextField" destination="PYa-Ce-L1x" id="GJw-5B-2Wi"/>
                         <outlet property="productSizeTextField" destination="AmR-hc-MeX" id="atA-vb-Xk1"/>
+                        <outlet property="purchaseDateLabel" destination="7s3-zm-wm0" id="vcP-Nw-qs6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vvx-Lj-Ri5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -379,28 +395,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="q13-qq-Hza">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MUModel" translatesAutoresizingMaskIntoConstraints="NO" id="yKS-Jm-x40">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sLV-ve-1Gf">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells/>
-                                <connections>
-                                    <outlet property="dataSource" destination="2Xf-kB-njp" id="rfC-cI-s6o"/>
-                                    <outlet property="delegate" destination="2Xf-kB-njp" id="j9y-Nm-cKh"/>
-                                </connections>
-                            </collectionView>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="39W-15-9Pj">
+                                <rect key="frame" x="164" y="241" width="54" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bly-vW-TsS">
+                                <rect key="frame" x="280" y="241" width="58" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K1a-uZ-D9I">
+                                <rect key="frame" x="231" y="313" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UFD-lR-IqF">
+                                <rect key="frame" x="216" y="372" width="76" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="q13-qq-Hza" secondAttribute="trailing" id="7M5-WT-1xw"/>
-                            <constraint firstItem="6YI-6v-Is4" firstAttribute="top" secondItem="q13-qq-Hza" secondAttribute="bottom" id="b1F-ow-KCD"/>
-                            <constraint firstItem="q13-qq-Hza" firstAttribute="top" secondItem="2Su-R2-ZnJ" secondAttribute="bottom" id="h7b-Se-IpN"/>
-                            <constraint firstItem="q13-qq-Hza" firstAttribute="leading" secondItem="lVb-dI-XIa" secondAttribute="leading" id="i2S-gD-Hwb"/>
+                            <constraint firstAttribute="trailing" secondItem="yKS-Jm-x40" secondAttribute="trailing" id="2uu-Hz-4BR"/>
+                            <constraint firstItem="yKS-Jm-x40" firstAttribute="leading" secondItem="lVb-dI-XIa" secondAttribute="leading" id="56O-WM-tAU"/>
+                            <constraint firstItem="yKS-Jm-x40" firstAttribute="top" secondItem="2Su-R2-ZnJ" secondAttribute="bottom" id="L7D-9J-xoT"/>
+                            <constraint firstItem="6YI-6v-Is4" firstAttribute="top" secondItem="yKS-Jm-x40" secondAttribute="bottom" id="WtK-8B-aVL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oq9-6q-LYH">
@@ -412,13 +436,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="collectionView" destination="q13-qq-Hza" id="IhJ-LY-cef"/>
                         <segue destination="YYv-6C-g0x" kind="show" identifier="showDetailBagVC" id="Id5-zW-FmD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FkL-O7-gxe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="704.79999999999995" y="-582.45877061469275"/>
+            <point key="canvasLocation" x="704.79999999999995" y="-583.3583208395803"/>
         </scene>
         <!--Detail Bag View Controller-->
         <scene sceneID="5Dn-TN-epr">
@@ -591,5 +614,6 @@
     </scenes>
     <resources>
         <image name="Barcode" width="25" height="25"/>
+        <image name="MUModel" width="500" height="640"/>
     </resources>
 </document>

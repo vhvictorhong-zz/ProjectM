@@ -15,6 +15,10 @@ class CreateItemViewController: UIViewController, WWCalendarTimeSelectorProtocol
     @IBOutlet weak var productSizeTextField: UITextField!
     @IBOutlet weak var productColourTextField: UITextField!
     @IBOutlet weak var productPriceTextField: UITextField!
+    @IBOutlet weak var purchaseDateLabel: UILabel!
+    @IBOutlet weak var expirationDateLabel: UILabel!
+    
+    var dateSelected: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +42,10 @@ class CreateItemViewController: UIViewController, WWCalendarTimeSelectorProtocol
         
         present(datePurchaseSelector, animated: true, completion: nil)
         
+        if let date = dateSelected {
+            purchaseDateLabel.text = date
+        }
+        
     }
 
     @IBAction func dateExpiryAction(_ sender: Any) {
@@ -47,6 +55,9 @@ class CreateItemViewController: UIViewController, WWCalendarTimeSelectorProtocol
         
         present(dateExpirySelector, animated: true, completion: nil)
         
+        if let date = dateSelected {
+            expirationDateLabel.text = date
+        }
     }
     
     func WWCalendarTimeSelectorDone(_ selector: WWCalendarTimeSelector, date: Date) {
@@ -57,6 +68,7 @@ class CreateItemViewController: UIViewController, WWCalendarTimeSelectorProtocol
         dateFormatter.dateStyle = DateFormatter.Style.full
         let formatDate = dateFormatter.string(from: date)
         
+        dateSelected = formatDate
         print("Format date: \(formatDate)")
         
     }
